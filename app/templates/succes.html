@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>England Premier League Table</title>
+  </head>
+<body>
+<h1 align="center">England Premier League Table</h1>
+<table style="width:80%; margin:0 auto;">
+  <tr align="center">
+    <th>Logo</th>
+    <th>Team</th>
+    <th>Position</th>
+    <th>Points</th>
+    <th>Played Games</th>
+    <th>Won</th>
+    <th>Draw</th>
+    <th>Lost</th>
+    <th>Goals for</th>
+    <th>Goals Against</th>
+    <th>Goal Difference</th>
+  </tr>
+{% for row in data %}
+  <tr align="center">
+    <td><img src="{{row.team.crestUrl}}" alt="logo" width="50" height="50"></td>
+    <td><b>{{row.team.name}}</b></td>
+    <td><b>{{row.position}}</b></td>
+    <td><b>{{row.points}}</b></td>
+    <td>{{row.playedGames}}</td>
+    <td>{{row.won}}</td>
+    <td>{{row.draw}}</td>
+    <td>{{row.lost}}</td>
+    <td>{{row.goalsFor}}</td>
+    <td>{{row.goalsAgainst}}</td>
+    <td>{{row.goalDifference}}</td>
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>
+
