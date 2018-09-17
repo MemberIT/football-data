@@ -9,7 +9,7 @@ from app import app
 
 @app.route('/')
 def standings():
-    SECRET_KEY = os.environ.get("SECRET_KEY", default=None)
+    SECRET_KEY = os.environ.get("SECRET_KEY")
     if not SECRET_KEY:
         raise ValueError("No secret key set for Flask application")
     id_competitions = '2021'
